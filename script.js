@@ -1,24 +1,23 @@
-// Fonction pour ouvrir la carte du projet
-function openCard(project) {
-  // Récupère les informations du projet
-  const imgSrc = project.querySelector("img").src;
-  const title = project.querySelector("h3").textContent;
-  const description = project.querySelector("p").textContent;
-  const codeLink = project.querySelector("a[href^='https://github.com']").href;
-  const demoLink = project.querySelector("a[href^='https://']").href;
+function openCard(projectElement) {
+  // Récupérer les données du projet
+  const title = projectElement.querySelector("h3").innerText;
+  const description = projectElement.getAttribute("data-description");
+  const image = projectElement.getAttribute("data-img");
+  const codeLink = projectElement.getAttribute("data-code");
+  const demoLink = projectElement.getAttribute("data-demo");
 
-  // Met à jour les informations de la carte
-  document.getElementById("card-img").src = imgSrc;
-  document.getElementById("card-title").textContent = title;
-  document.getElementById("card-description").textContent = description;
+  // Mettre à jour les informations dans la carte modale
+  document.getElementById("card-title").innerText = title;
+  document.getElementById("card-description").innerText = description;
+  document.getElementById("card-img").src = image;
   document.getElementById("card-code").href = codeLink;
   document.getElementById("card-demo").href = demoLink;
 
-  // Affiche la carte
+  // Afficher la carte modale
   document.getElementById("project-card").style.display = "flex";
 }
 
-// Fonction pour fermer la carte
 function closeCard() {
+  // Masquer la carte modale
   document.getElementById("project-card").style.display = "none";
 }

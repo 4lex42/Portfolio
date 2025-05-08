@@ -7,7 +7,7 @@
   
   body {
     font-family: 'Arial', sans-serif;
-    background-color: red;
+    background-color: #f7f7f7;
     color: #333;
     line-height: 1.6;
     padding: 0 20px;
@@ -26,12 +26,6 @@
   header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 20px;
   }
   
   header .btn {
@@ -70,44 +64,15 @@
   .project {
     background-color: #fff;
     border-radius: 10px;
-    overflow: hidden;
+    padding: 20px;
     width: 300px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
   }
   
-  .project img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
   .project h3 {
     font-size: 1.8rem;
-    margin: 20px 0 10px;
-  }
-  
-  .project p {
-    color: #555;
-    margin-bottom: 20px;
-    font-size: 1rem;
-  }
-  
-  .project a {
-    display: inline-block;
-    margin: 0 5px;
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .project a:hover {
-    background-color: #0056b3;
   }
   
   .project:hover {
@@ -126,16 +91,20 @@
     display: none;
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
   }
   
   .card-content {
     background-color: #fff;
     padding: 30px;
-    width: 60%;
+    width: 80%;
+    max-width: 1000px;
+    height: 90%;
     border-radius: 10px;
     text-align: center;
     position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
   }
   
   .card-content img {
@@ -184,65 +153,11 @@
     color: #000;
   }
   
-  /* À propos */
-  #about {
-    padding: 60px 20px;
-    background-color: #fff;
-    text-align: center;
-    margin-top: 40px;
-    border-radius: 10px;
-  }
-  
-  #about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  #about p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-top: 20px;
-  }
-  
-  /* Contact */
-  #contact {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    margin-top: 40px;
-  }
-  
-  #contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  #contact p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .social-links a {
-    margin: 0 15px;
-    font-size: 2rem;
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .social-links a:hover {
-    color: #007bff;
-  }
-  
   /* Responsive */
   @media (max-width: 768px) {
-    .project-gallery {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .project-card .card-content {
-      width: 80%;
+    .card-content {
+      width: 90%;
+      height: auto;
     }
   
     .project {
