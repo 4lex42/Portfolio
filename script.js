@@ -12,7 +12,9 @@ fetch('projects.json')
       <p>${proj.description}</p>
       <a href="${proj.code}" target="_blank">Code</a> |
       <a href="${proj.demo}" target="_blank">Demo</a>
-    `;
+    `
+    console.log("Script chargé !");
+
 
       container.appendChild(div);
     });
