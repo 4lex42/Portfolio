@@ -1,7 +1,7 @@
 function openCard(projectElement) {
   // Récupérer les données du projet
   const title = projectElement.querySelector("h3").innerText;
-  const description = projectElement.getAttribute("data-description");
+  const description = projectElement.querySelector("p").innerText;
   const image = projectElement.getAttribute("data-img");
   const codeLink = projectElement.getAttribute("data-code");
   const demoLink = projectElement.getAttribute("data-demo");
