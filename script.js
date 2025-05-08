@@ -1,21 +1,24 @@
+// Fonction pour ouvrir la carte du projet
+function openCard(project) {
+  // Récupère les informations du projet
+  const imgSrc = project.querySelector("img").src;
+  const title = project.querySelector("h3").textContent;
+  const description = project.querySelector("p").textContent;
+  const codeLink = project.querySelector("a[href^='https://github.com']").href;
+  const demoLink = project.querySelector("a[href^='https://']").href;
 
-fetch('projects.json')
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById('projectGallery');
-    data.forEach(proj => {
-      const div = document.createElement('div');
-      div.className = 'project';
-      div.innerHTML = `
-      <img src="${proj.image}" alt="${proj.title}">
-      <h3>${proj.title}</h3>
-      <p>${proj.description}</p>
-      <a href="${proj.code}" target="_blank">Code</a> |
-      <a href="${proj.demo}" target="_blank">Demo</a>
-    `
-    console.log("Script chargé !");
+  // Met à jour les informations de la carte
+  document.getElementById("card-img").src = imgSrc;
+  document.getElementById("card-title").textContent = title;
+  document.getElementById("card-description").textContent = description;
+  document.getElementById("card-code").href = codeLink;
+  document.getElementById("card-demo").href = demoLink;
 
+  // Affiche la carte
+  document.getElementById("project-card").style.display = "flex";
+}
 
-      container.appendChild(div);
-    });
-  });
+// Fonction pour fermer la carte
+function closeCard() {
+  document.getElementById("project-card").style.display = "none";
+}

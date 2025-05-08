@@ -15,14 +15,14 @@
   <section id="projects">
     <h2>Mes Projets</h2>
     <div class="project-gallery">
-      <div class="project">
-        <img src="assets/projets/devine-le-nombre.png" alt="Devine le Nombre">
-        <img src="assets/projets/devine-le-nombre2.png" alt="Devine le Nombre2">
+      <div class="project" onclick="openCard(this)">
+        <img src="assets/projets/DevineLeNombre.png" alt="Devine le Nombre">
         <h3>Devine le Nombre</h3>
         <p>Jeu interactif avec interface Tkinter.</p>
         <a href="https://github.com/4lex42/DevineLeNombre" target="_blank">Code</a>
         <a href="https://4lex42.github.io/DevineLeNombre/" target="_blank">Demo</a>
       </div>
+      <!-- Ajouter d'autres projets ici -->
     </div>
   </section>
 
@@ -38,5 +38,19 @@
       <a href="https://github.com/4lex42" target="_blank"><img src="assets/icons/github.png" alt="GitHub"></a>
     </div>
   </section>
+
+  <!-- Carte de projet (initialement masquée) -->
+  <div id="project-card" class="project-card">
+    <div class="card-content">
+      <span class="close" onclick="closeCard()">&times;</span>
+      <img id="card-img" src="" alt="">
+      <h3 id="card-title"></h3>
+      <p id="card-description"></p>
+      <a id="card-code" href="" target="_blank">Code</a>
+      <a id="card-demo" href="" target="_blank">Demo</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
