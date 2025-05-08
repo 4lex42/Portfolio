@@ -3,15 +3,8 @@
   {
     "title": "Devine le Nombre",
     "description": "Jeu interactif avec interface Tkinter.",
-    "image": "assets/images/devine-le-nombre.png",
+    "image": "assets/projets/devine-le-nombre.png",
     "code": "https://github.com/4lex42/DevineLeNombre",
     "demo": "https://4lex42.github.io/DevineLeNombre/"
-  },
-  {
-    "title": "Portfolio Web",
-    "description": "Site web personnel pour présenter mes projets.",
-    "image": "assets/images/portfolio-web.png",
-    "code": "https://github.com/4lex42/PortfolioWeb",
-    "demo": "https://4lex42.github.io/PortfolioWeb/"
   }
 ]
