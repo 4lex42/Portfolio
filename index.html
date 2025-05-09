@@ -3,51 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio - Alex Laroy</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Portfolio IT</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #1f2937;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .project {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .project img {
+      max-width: 100%;
+      height: auto;
+    }
+    .project-content {
+      padding: 1rem;
+    }
+    .project h3 {
+      margin: 0;
+      color: #1f2937;
+    }
+    .project p {
+      margin: 0.5rem 0;
+    }
+    .project a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .project a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Alex Laroy</h1>
-    <a href="#projects" class="btn">Voir mes projets</a>
+    <h1>Mon Portfolio IT</h1>
+    <h2>Alex Laroy</h2>
+    <p>Étudiant en informatique</p>
   </header>
 
-  <section id="projects">
-    <h2>Mes Projets</h2>
-    <div class="project-gallery">
-      <div class="project">
-        <h3>Devine le Nombre</h3>
-        <p>Jeu interactif avec interface Tkinter.</p>
-        <button class="open-card-btn" onclick="openCard(this)">Voir le projet</button>
+  <div class="container">
+    <div class="project">
+      <img src="assets/projets/DevineLeNombre.png" alt="Projet 1" />
+      <img src="assets/projets/DevineLeNombre2.png" alt="Projet 1" />
+      <div class="project-content">
+        <h3>Devine le nombre</h3>
+        <p>Durée : 12 heures</p>
+        <p>Une application web simple en JavaScript permettant de créer, éditer et supprimer des tâches.</p>
+        <p><a href="https://github.com/4lex42/DevineLeNombre" target="_blank">Voir le code</a></p>
       </div>
-      <!-- Ajouter d'autres projets ici -->
     </div>
-  </section>
 
-  <section id="about">
-    <h2>À propos de moi</h2>
-    <p>Étudiant en informatique à l'EPHEC, passionné par le développement d'applications web.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email : <a href="mailto:alexlaroy1609@gmail.com">alexlaroy1609@gmail.com</a></p>
-    <div class="social-links">
-      <a href="https://github.com/4lex42" target="_blank"><img src="assets/icons/github.png" alt="GitHub"></a>
+    <!-- <div class="project">
+      <img src="https://via.placeholder.com/800x400?text=Projet+2" alt="Projet 2" />
+      <div class="project-content">
+        <h3>Site vitrine responsive</h3>
+        <p>Durée : 8 heures</p>
+        <p>Un site web responsive développé avec HTML, CSS et un peu de JavaScript.</p>
+        <p><a href="https://github.com/tonpseudo/site-vitrine" target="_blank">Voir le code</a></p>
+      </div>
     </div>
-  </section>
 
-  <!-- Carte de projet (initialement masquée) -->
-  <div id="project-card" class="project-card">
-    <div class="card-content">
-      <span class="close" onclick="closeCard()">&times;</span>
-      <<img src="assets/projets/DevineLeNombre.png" alt="Devine le Nombre">
-      <h3 id="card-title">Devine le nombre</h3>
-      <p id="card-description">Jeu interactif avec interface Tkinter.</p>
-      <a id="card-code" href="https://github.com/4lex42/DevineLeNombre" target="_blank">Code</a>
-    </div>
+    <div class="project">
+      <img src="https://via.placeholder.com/800x400?text=Projet+3" alt="Projet 3" />
+      <div class="project-content">
+        <h3>API météo avec Python</h3>
+        <p>Durée : 15 heures</p>
+        <p>Utilisation de Flask pour créer une API météo basée sur des données ouvertes.</p>
+        <p><a href="https://github.com/tonpseudo/api-meteo" target="_blank">Voir le code</a></p>
+      </div>
+    </div> -->
   </div>
 
-  <script src="script.js"></script>
+  <footer>
+    © 2025 - Ton Nom - Portfolio Étudiant IT
+  </footer>
 </body>
 </html>
