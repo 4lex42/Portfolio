@@ -30,14 +30,24 @@
       margin-bottom: 2rem;
       overflow: hidden;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
     }
-    .project img {
-      max-width: 100%;
+    .project-images {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .project-images img {
+      width: 200px;
       height: auto;
+      border-radius: 4px;
+      object-fit: cover;
     }
     .project-content {
-      padding: 1rem;
+      flex: 1;
     }
     .project h3 {
       margin: 0;
@@ -71,8 +81,10 @@
 
   <div class="container">
     <div class="project">
-      <img src="assets/projets/DevineLeNombre.png" alt="Projet 1" />
-      <img src="assets/projets/DevineLeNombre2.png" alt="Projet 1" />
+      <div class="project-images">
+        <img src="assets/projets/DevineLeNombre.png" alt="Devine le nombre 1" />
+        <img src="assets/projets/DevineLeNombre2.png" alt="Devine le nombre 2" />
+      </div>
       <div class="project-content">
         <h3>Devine le nombre</h3>
         <p>Durée : 12 heures</p>
@@ -80,30 +92,10 @@
         <p><a href="https://github.com/4lex42/DevineLeNombre" target="_blank">Voir le code</a></p>
       </div>
     </div>
-
-    <!-- <div class="project">
-      <img src="https://via.placeholder.com/800x400?text=Projet+2" alt="Projet 2" />
-      <div class="project-content">
-        <h3>Site vitrine responsive</h3>
-        <p>Durée : 8 heures</p>
-        <p>Un site web responsive développé avec HTML, CSS et un peu de JavaScript.</p>
-        <p><a href="https://github.com/tonpseudo/site-vitrine" target="_blank">Voir le code</a></p>
-      </div>
-    </div>
-
-    <div class="project">
-      <img src="https://via.placeholder.com/800x400?text=Projet+3" alt="Projet 3" />
-      <div class="project-content">
-        <h3>API météo avec Python</h3>
-        <p>Durée : 15 heures</p>
-        <p>Utilisation de Flask pour créer une API météo basée sur des données ouvertes.</p>
-        <p><a href="https://github.com/tonpseudo/api-meteo" target="_blank">Voir le code</a></p>
-      </div>
-    </div> -->
   </div>
 
   <footer>
-    © 2025 - Ton Nom - Portfolio Étudiant IT
+    © 2025 - Alex Laroy - Portfolio Étudiant IT
   </footer>
 </body>
 </html>
