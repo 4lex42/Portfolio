@@ -12,58 +12,86 @@
       padding: 0;
       color: #333;
     }
+
     header {
       background-color: #1f2937;
       color: white;
       padding: 2rem;
       text-align: center;
     }
+
     .container {
       max-width: 1000px;
       margin: auto;
       padding: 2rem;
     }
+
     .project {
       background-color: white;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       margin-bottom: 2rem;
-      overflow: hidden;
+      padding: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .project:hover {
+      background-color: #f0f0f0;
+    }
+
+    .project-content {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
       gap: 1rem;
-      padding: 1rem;
+      align-items: flex-start;
     }
-    .project-images {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .project-images img {
-      width: 200px;
-      height: auto;
-      border-radius: 4px;
-      object-fit: cover;
-    }
-    .project-content {
+
+    .project-text {
       flex: 1;
     }
+
     .project h3 {
       margin: 0;
       color: #1f2937;
     }
+
     .project p {
       margin: 0.5rem 0;
     }
+
     .project a {
       color: #2563eb;
       text-decoration: none;
       font-weight: bold;
     }
+
     .project a:hover {
       text-decoration: underline;
     }
+
+    .project-images {
+      display: none;
+      margin-top: 1rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .project-images img {
+      width: 200px;
+      border-radius: 4px;
+    }
+
+    .project.open .project-images {
+      display: flex;
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -80,16 +108,75 @@
   </header>
 
   <div class="container">
-    <div class="project">
+    <div class="project" onclick="toggleProject(this)">
+      <div class="project-content">
+        <div class="project-text">
+          <h3>Devine le nombre</h3>
+          <p>Durée : 12 heures</p>
+          <p>Durée validée : 10 heures</p>
+          <p>Une application web simple en JavaScript permettant de créer, éditer et supprimer des tâches.</p>
+          <p><a href="https://github.com/4lex42/DevineLeNombre" target="_blank">Voir le code</a></p>
+        </div>
+      </div>
       <div class="project-images">
         <img src="assets/projets/DevineLeNombre.png" alt="Devine le nombre 1" />
         <img src="assets/projets/DevineLeNombre2.png" alt="Devine le nombre 2" />
       </div>
+    </div>
+
+    <div class="project" onclick="toggleProject(this)">
       <div class="project-content">
-        <h3>Devine le nombre</h3>
-        <p>Durée : 12 heures</p>
-        <p>Une application web simple en JavaScript permettant de créer, éditer et supprimer des tâches.</p>
-        <p><a href="https://github.com/4lex42/DevineLeNombre" target="_blank">Voir le code</a></p>
+        <div class="project-text">
+          <h3>Hackathon Electronique 2024 - EPHEC</h3>
+          <p>Durée : 48 heures</p>
+          <p>Durée validée : 10 heures</p>
+          <p>Nous avons réalisé une boîte à musique avec un envoyeur de message en morse.</p>
+        </div>
+      </div>
+      <div class="project-images">
+        <img src="assets/projets/DevineLeNombre.png" alt="Hackathon" />
+      </div>
+    </div>
+
+    <div class="project" onclick="toggleProject(this)">
+      <div class="project-content">
+        <div class="project-text">
+          <h3>Formation OpenClassroom Java</h3>
+          <p>Durée : 12 heures</p>
+          <p>Durée validée : 10 heures</p>
+          <p>J'ai réalisé une formation afin d'apprendre le langage Java.</p>
+        </div>
+      </div>
+      <div class="project-images">
+        <img src="assets/projets/DevineLeNombre.png" alt="Formation Java" />
+      </div>
+    </div>
+
+    <div class="project" onclick="toggleProject(this)">
+      <div class="project-content">
+        <div class="project-text">
+          <h3>Formation OpenClassroom PHP</h3>
+          <p>Durée : 8 heures</p>
+          <p>Durée validée : 8 heures</p>
+          <p>J'ai réalisé une formation afin d'apprendre le langage PHP.</p>
+        </div>
+      </div>
+      <div class="project-images">
+        <img src="assets/projets/DevineLeNombre.png" alt="Formation PHP" />
+      </div>
+    </div>
+
+    <div class="project" onclick="toggleProject(this)">
+      <div class="project-content">
+        <div class="project-text">
+          <h3>Conférence "Les outils Microsoft et le Cloud 2024"</h3>
+          <p>Durée : 2 heures</p>
+          <p>Durée validée : 2 heures</p>
+          <p>J'ai assisté à une conférence visant à mieux comprendre les outils Microsoft et le Cloud.</p>
+        </div>
+      </div>
+      <div class="project-images">
+        <img src="assets/projets/DevineLeNombre.png" alt="Conférence Microsoft" />
       </div>
     </div>
   </div>
@@ -97,5 +184,11 @@
   <footer>
     © 2025 - Alex Laroy - Portfolio Étudiant IT
   </footer>
+
+  <script>
+    function toggleProject(element) {
+      element.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
