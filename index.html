@@ -209,15 +209,60 @@
       </div>
     </div>
 </div>
+  <section id="contact" style="text-align:center; padding: 2rem 0; background:#f3f4f6;">
+    <h2>Contact</h2>
+    <p>
+      GitHub :
+      <a href="https://github.com/4lex42" target="_blank" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.28 3.44 9.75 8.21 11.33.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.32-1.75-1.32-1.75-1.08-.74.08-.72.08-.72 1.2.09 1.83 1.23 1.83 1.23 1.06 1.81 2.8 1.29 3.49.99.11-.77.41-1.29.74-1.59-2.67-.31-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.24-3.24-.12-.31-.54-1.57.12-3.27 0 0 1.01-.32 3.3 1.23a11.53 11.53 0 0 1 6 0C17.99 4.7 19 5.02 19 5.02c.66 1.7.24 2.96.12 3.27.77.84 1.24 1.92 1.24 3.24 0 4.63-2.8 5.65-5.48 5.96.43.37.81 1.1.81 2.22 0 1.6-.01 2.88-.01 3.28 0 .32.22.7.83.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/>
+        </svg>
+        github.com/4lex42
+      </a>
+    </p>
+  </section>
+
 
   <footer>
-    © 2025 - Alex Laroy - Portfolio Étudiant IT
-  </footer>
+  <div id="totals">
+    Total d'heures : <span id="total-hours">0</span> | Total d'heures validées : <span id="valid-hours">0</span>
+  </div>
+  © 2025 - Alex Laroy - Portfolio Étudiant IT
+</footer>
+
 
   <script>
-    function toggleProject(element) {
-      element.classList.toggle('open');
-    }
-  </script>
+  function toggleProject(element) {
+    element.classList.toggle('open');
+  }
+
+  function extractHours(text) {
+    const match = text.match(/(\d+)\s*heures?/i);
+    return match ? parseInt(match[1], 10) : 0;
+  }
+
+  function calculateTotals() {
+    const projects = document.querySelectorAll('.project');
+    let total = 0, valid = 0;
+
+    projects.forEach(project => {
+      const ps = project.querySelectorAll('p');
+      ps.forEach(p => {
+        if (p.textContent.includes('Durée :')) {
+          total += extractHours(p.textContent);
+        }
+        if (p.textContent.includes('Durée validée :')) {
+          valid += extractHours(p.textContent);
+        }
+      });
+    });
+
+    document.getElementById('total-hours').textContent = total;
+    document.getElementById('valid-hours').textContent = valid;
+  }
+
+  window.onload = calculateTotals;
+</script>
+
 </body>
 </html>
