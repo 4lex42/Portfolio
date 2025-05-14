@@ -149,11 +149,13 @@
   function enableImageToggle() {
     const images = document.querySelectorAll('.project-images img');
     images.forEach(img => {
-      img.addEventListener('click', () => {
+      img.addEventListener('click', (event) => {
+        event.stopPropagation(); // ⛔ Empêche de refermer la carte
         img.classList.toggle('enlarged');
       });
     });
   }
+
 
   window.onload = () => {
     calculateTotals();
