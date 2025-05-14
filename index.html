@@ -107,7 +107,13 @@
     <p>Étudiant en informatique</p>
   </header>
 
-  <div class="container">
+  <!-- Début du container -->
+<div class="container">
+
+  <!-- Section Projets Web -->
+  <section>
+    <h2>Projets Web</h2>
+
     <div class="project" onclick="toggleProject(this)">
       <div class="project-content">
         <div class="project-text">
@@ -123,20 +129,11 @@
         <img src="assets/projets/DevineLeNombre2.png" alt="Devine le nombre 2" />
       </div>
     </div>
+  </section>
 
-    <div class="project" onclick="toggleProject(this)">
-      <div class="project-content">
-        <div class="project-text">
-          <h3>Hackathon Electronique 2024 - EPHEC</h3>
-          <p>Durée : 48 heures</p>
-          <p>Durée validée : 10 heures</p>
-          <p>Nous avons réalisé une boîte à musique avec un envoyeur de message en morse.</p>
-        </div>
-      </div>
-      <div class="project-images">
-        <img src="assets/projets/DevineLeNombre.png" alt="Hackathon" />
-      </div>
-    </div>
+  <!-- Section Formations -->
+  <section>
+    <h2>Formations</h2>
 
     <div class="project" onclick="toggleProject(this)">
       <div class="project-content">
@@ -165,6 +162,45 @@
         <img src="assets/projets/FormationPHP.png" alt="Formation PHP" />
       </div>
     </div>
+  </section>
+
+  <!-- Section Projets Divers / Electronique -->
+  <section>
+    <h2>Projets Électronique & Logiciels</h2>
+
+    <div class="project" onclick="toggleProject(this)">
+      <div class="project-content">
+        <div class="project-text">
+          <h3>Hackathon Electronique 2024 - EPHEC</h3>
+          <p>Durée : 48 heures</p>
+          <p>Durée validée : 10 heures</p>
+          <p>Nous avons réalisé une boîte à musique avec un envoyeur de message en morse.</p>
+        </div>
+      </div>
+      <div class="project-images">
+        <img src="assets/projets/DevineLeNombre.png" alt="Hackathon" />
+      </div>
+    </div>
+
+    <div class="project" onclick="toggleProject(this)">
+      <div class="project-content">
+        <div class="project-text">
+          <h3>Projet Python en console</h3>
+          <p>Durée : 12 heures</p>
+          <p>Durée validée : 10 heures</p>
+          <p>J'ai réalisé un projet en python qui se joue en ligne de commande.</p>
+          <p><a href="https://github.com/4lex42/PythonTextGame" target="_blank">Voir le code</a></p>
+        </div>
+      </div>
+      <div class="project-images">
+        <img src="assets/projets/FormationPHP.png" alt="Python console" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Conférences -->
+  <section>
+    <h2>Conférences & Événements</h2>
 
     <div class="project" onclick="toggleProject(this)">
       <div class="project-content">
@@ -179,40 +215,37 @@
         <img src="assets/projets/AttestationOutilMicrosoft2.png" alt="Conférence Microsoft" />
       </div>
     </div>
+  </section>
 
-    <div class="project" onclick="toggleProject(this)">
-        <div class="project-content">
-          <div class="project-text">
-            <h3>Cyber Security Challenge - 2023 - 2024 - 2025</h3>
-            <p>Durée : 72 heures</p>
-            <p>Durée validée : 10 heures</p>
-            <p>J'ai réalisé des Cyber Security Challenges.</p>
-          </div>
-        </div>
-        <div class="project-images">
-          <img src="assets/projets/FormationPHP.png" alt="Formation PHP" />
-        </div>
-      </div>
+  <!-- Section Cyber Sécurité -->
+  <section>
+    <h2>Cyber Sécurité</h2>
 
     <div class="project" onclick="toggleProject(this)">
       <div class="project-content">
         <div class="project-text">
-          <h3>Projet Python en console</h3>
-          <p>Durée : 12 heures</p>
+          <h3>Cyber Security Challenge - 2023 - 2024 - 2025</h3>
+          <p>Durée : 72 heures</p>
           <p>Durée validée : 10 heures</p>
-          <p>J'ai réalisé un projet en python qui se joue en ligne de commande.</p>
-          <p><a href="https://github.com/4lex42/PythonTextGame" target="_blank">Voir le code</a></p>
+          <p>J'ai réalisé des Cyber Security Challenges.</p>
         </div>
       </div>
       <div class="project-images">
-        <img src="assets/projets/FormationPHP.png" alt="Formation PHP" />
+        <img src="assets/projets/CSC-2023 (1).png" alt="CSC 1" />
+        <img src="assets/projets/CSC-2023 (2).png" alt="CSC 2" />
+        <img src="assets/projets/CSC-2024 (1).png" alt="CSC 3" />
+        <img src="assets/projets/CSC-2023 (2).png" alt="CSC 4" />
+        <img src="assets/projets/CSC-2025.png" alt="CSC 5" />
       </div>
     </div>
-    <div id="totals">
-    Total d'heures : <span id="total-hours">0</span> | Total d'heures validées : <span id="valid-hours">0</span>
+  </section>
+
+  <!-- Totaux -->
+  <div id="totals" style="margin-top: 2rem; text-align: center; font-weight: bold;">
+    Total d'heures : <span id="total-hours">0</span> | Total d'heures valides : <span id="valid-hours">0</span>
   </div>
 </div>
-
+<!-- Fin du container -->
   <section id="contact" style="text-align:center; padding: 2rem 0; background:#f3f4f6;">
     <h2>Contact</h2>
     <p>
@@ -229,7 +262,7 @@
 
   <footer>
   
-  © 2025 - Alex Laroy - Portfolio Étudiant IT
+  © 2025 -  Portfolio Étudiant IT
 </footer>
 
 
