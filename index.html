@@ -87,6 +87,22 @@
       animation: fadeIn 0.3s ease-in;
     }
 
+    .project-images img.enlarged {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      height: auto;
+      max-width: 90vw;
+      max-height: 90vh;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+      border-radius: 8px;
+      background: white;
+      cursor: zoom-out;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: scale(0.98); }
       to { opacity: 1; transform: scale(1); }
@@ -100,6 +116,51 @@
     }
   </style>
 </head>
+<script>
+  function toggleProject(element) {
+    element.classList.toggle('open');
+  }
+
+  function extractHours(text) {
+    const match = text.match(/(\d+)\s*heures?/i);
+    return match ? parseInt(match[1], 10) : 0;
+  }
+
+  function calculateTotals() {
+    const projects = document.querySelectorAll('.project');
+    let total = 0, valid = 0;
+
+    projects.forEach(project => {
+      const ps = project.querySelectorAll('p');
+      ps.forEach(p => {
+        if (p.textContent.includes('Durée :')) {
+          total += extractHours(p.textContent);
+        }
+        if (p.textContent.includes('Durée validée :')) {
+          valid += extractHours(p.textContent);
+        }
+      });
+    });
+
+    document.getElementById('total-hours').textContent = total;
+    document.getElementById('valid-hours').textContent = valid;
+  }
+
+  function enableImageToggle() {
+    const images = document.querySelectorAll('.project-images img');
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        img.classList.toggle('enlarged');
+      });
+    });
+  }
+
+  window.onload = () => {
+    calculateTotals();
+    enableImageToggle();
+  };
+</script>
+
 <body>
   <header>
     <h1>Mon Portfolio IT</h1>
