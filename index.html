@@ -114,6 +114,22 @@
       font-size: 0.9rem;
       color: #777;
     }
+    
+    .download-button {
+      display: inline-block;
+      background-color: #2563eb;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-button:hover {
+      background-color: #1e40af;
+    }
+
   </style>
 </head>
 <script>
@@ -150,7 +166,7 @@
     const images = document.querySelectorAll('.project-images img');
     images.forEach(img => {
       img.addEventListener('click', (event) => {
-        event.stopPropagation(); // ⛔ Empêche de refermer la carte
+        event.stopPropagation(); // Empêche de refermer la carte
         img.classList.toggle('enlarged');
       });
     });
@@ -169,6 +185,12 @@
     <h2>Alex Laroy</h2>
     <p>Étudiant en informatique</p>
   </header>
+
+  <section style="text-align: center; margin-top: 2rem;">
+    <a href="assets/CV-AlexLaroy.pdf" download class="download-button">
+      Télécharger mon CV
+    </a>
+  </section>
 
   <!-- Début du container -->
 <div class="container">
@@ -189,7 +211,7 @@
       <div class="project-images">
         <img src="assets/projets/DevineLeNombre.png" alt="Devine le nombre 1" />
         <img src="assets/projets/DevineLeNombre2.png" alt="Devine le nombre 2" />
-        <p>Une application interactive développée en Python permettant aux utilisateurs de deviner un nombre aléatoire généré par l’ordinateur. Le projet inclut des fonctionnalités telles qu’une interface, un système de vérification de saisie, un compteur d’essais, et un retour dynamique à l’utilisateur. Ce projet m’a permis de renforcer mes compétences en logique Python et en gestion des interfaces.</p>
+        <p>Ce projet m’a permis de découvrir la logique de programmation en Python de manière ludique. Le principe est simple : l’utilisateur doit deviner un nombre généré aléatoirement. J’ai ajouté des fonctionnalités comme une interface utilisateur, un compteur d’essais et des messages dynamiques. C’était un bon exercice pour apprendre à structurer un programme et à rendre l’expérience interactive. Idéal pour faire mes premiers pas concrets en développement.</p>
       </div>
     </div>
 
@@ -204,7 +226,7 @@
       </div>
       <div class="project-images">
         <img src="assets/projets/FormationPHP.png" alt="Python console" />
-        <p>Un mini-jeu en ligne de commande codé en Python, simulant des combats d'aventure textuel où le joueur interagit à travers des choix. Le projet utilise des boucles, des conditions, des fonctions, et les classes Python pour renforcer ma connaissance des langages orienté objet.</p>
+        <p>J’ai développé un petit jeu d’aventure textuel en ligne de commande. Le joueur progresse dans une histoire à choix multiples, ce qui m’a permis de travailler avec des boucles, des conditions, et mes premières classes Python. Ce projet m’a vraiment aidé à comprendre les bases de la programmation orientée objet, tout en rendant l’apprentissage amusant.</p>
       </div>
     </div>
   </section>
@@ -223,7 +245,7 @@
       </div>
       <div class="project-images">
         <img src="assets/projets/FormationJava.png" alt="Formation Java" />
-        <p>Formation d’introduction au langage Java comprenant la syntaxe de base, la programmation orientée objet, les structures de contrôle, les classes et les méthodes. Cette formation m’a permis d’acquérir une compréhension claire de la logique orientée objet, de la compilation et de l’exécution de programmes Java.</p>
+        <p>Cette formation m’a permis de comprendre les bases du langage Java : la syntaxe, les objets, les classes et l’héritage. J’ai appris à structurer proprement un programme en Java et à appliquer la logique orientée objet. C’est une belle porte d’entrée vers le développement logiciel.</p>
       </div>
     </div>
 
@@ -237,7 +259,7 @@
       </div>
       <div class="project-images">
         <img src="assets/projets/FormationPHP.png" alt="Formation PHP" />
-        <p>Formation axée sur les fondamentaux du langage PHP, couvrant les variables, boucles, conditions, fonctions et intégration avec HTML. Cette formation m’a permis de mieux comprendre le développement côté serveur et les bases de la programmation web dynamique.</p>
+        <p>Avec cette formation, j’ai pu découvrir les bases du développement web côté serveur grâce à PHP. J’ai appris à manipuler les variables, fonctions, boucles et conditions, et à intégrer du PHP dans des pages HTML. Cela m’a donné envie d’approfondir mes connaissances en web dynamique.</p>
       </div>
     </div>
   </section>
@@ -255,8 +277,8 @@
         </div>
       </div>
       <div class="project-images">
-        <img src="assets/projets/DevineLeNombre.png" alt="Hackathon" />
-        <p>Projet réalisé durant un hackathon de 48 heures en équipe, consistant à concevoir une boîte à musique intégrant un module de transmission de messages en morse à l’aide de composants électroniques (buzzer, microcontrôleur). Ce défi a permis de combiner créativité, électronique de base et logique de programmation embarquée (Arduino/C++).</p>
+        <img src="assets/projets/Hackathon.png" alt="Hackathon" />
+        <p>Ce hackathon m’a permis de travailler en équipe sur un projet créatif mêlant électronique et programmation. On a conçu une boîte à musique capable d’envoyer des messages en morse avec un microcontrôleur (Arduino). C’était intense, mais très formateur pour la gestion de projet, le prototypage rapide et la logique embarquée.</p>
       </div>
     </div>
   </section>
@@ -275,7 +297,7 @@
       </div>
       <div class="project-images">
         <img src="assets/projets/AttestationOutilMicrosoft2.png" alt="Conférence Microsoft" />
-        <p>Conférence professionnelle organisée autour de l’écosystème Microsoft et des technologies cloud. J’ai découvert les solutions de collaboration d’entreprise et les principes de base du cloud computing, ainsi que leur impact dans les environnements IT modernes.</p>
+        <p>Durant cette conférence, j’ai découvert comment Microsoft utilise le cloud pour transformer les outils de travail. J’ai mieux compris les bases du cloud computing et les services comme Azure, qui sont aujourd’hui essentiels dans le développement moderne.</p>
       </div>
     </div>
 
@@ -283,13 +305,13 @@
       <div class="project-content">
         <div class="project-text">
           <h3>Conférence LaTeX</h3>
-          <p>Durée : 6 heures</p>
-          <p>Durée validée : 6 heures</p>
+          <p>Durée : 4 heures</p>
+          <p>Durée validée : 4 heures</p>
         </div>
       </div>
       <div class="project-images">
-        <img src="assets/projets/AttestationOutilMicrosoft2.png" alt="Conférence Latex" />
-              <p>Lors de cette conférence, j’ai découvert LaTeX, un système de composition de documents très utilisé dans le milieu universitaire et scientifique. J’ai appris à structurer un document, insérer des équations mathématiques, créer une bibliographie avec BibTeX, et générer un PDF professionnel. Cela m’a permis de mieux préparer mes futurs rapports académiques et documents techniques.</p>
+        <img src="assets/projets/LaTeX.png" alt="Conférence Latex" />
+        <p>J’ai assisté à cette conférence pour apprendre à rédiger des documents professionnels et techniques avec LaTeX. J’y ai découvert comment structurer un rapport, insérer des équations et gérer des références bibliographiques. C’est un outil que je compte utiliser dans mes futurs projets académiques et documentations techniques.</p>
       </div>
     </div>
   </section>
@@ -312,7 +334,7 @@
         <img src="assets/projets/CSC-2024 (1).png" alt="CSC 3" />
         <img src="assets/projets/CSC-2023 (2).png" alt="CSC 4" />
         <img src="assets/projets/CSC-2025.png" alt="CSC 5" />
-        <p>Participation à plusieurs éditions du Cyber Security Challenge Belgium, une compétition nationale sur la cybersécurité. Les épreuves couvrent les thématiques du hacking, cryptographie, forensic, reverse engineering et sécurité web. Ce challenge m’a permis de développer une pensée critique en sécurité informatique et de manipuler des outils comme Wireshark.</p>
+        <p>J’ai participé à plusieurs éditions du Cyber Security Challenge Belgium, une compétition qui m’a plongé dans le monde de la cybersécurité. J’ai pu me confronter à des défis variés : cryptographie, sécurité web, forensic, et même reverse engineering. J’ai appris à réfléchir autrement, à chercher des failles, et à manipuler des outils comme Wireshark. C’est une expérience qui m’a donné envie d’explorer encore plus ce domaine.</p>
       </div>
     </div>
   </section>
@@ -323,6 +345,23 @@
   </div>
 </div>
 <!-- Fin du container -->
+ <!-- Objectif Professionnel -->
+<section>
+  <h2>Objectif Professionnel</h2>
+  <div class="project" style="cursor: default;">
+    <div class="project-content">
+      <div class="project-text">
+        <p>
+          Mon objectif professionnel est de devenir un développeur polyvalent capable de créer des solutions innovantes, utiles et accessibles. Je suis passionné par la logique, la résolution de problèmes et l’apprentissage continu. À travers mes projets, mes formations et ma curiosité, je cherche à construire des bases solides en développement logiciel, en cybersécurité et dans l’ingénierie informatique au sens large. 
+        </p>
+        <p>
+          À terme, j’aimerais rejoindre une équipe dynamique où je pourrais contribuer à des projets concrets, continuer à apprendre au contact d’autres passionnés, et participer à la création de technologies ayant un impact réel. Je crois en une approche humble mais déterminée, où chaque expérience est une opportunité d’avancer.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
   <section id="contact" style="text-align:center; padding: 2rem 0; background:#f3f4f6;">
     <h2>Contact</h2>
     <p>
@@ -341,40 +380,6 @@
   
   © 2025 -  Portfolio Étudiant IT
 </footer>
-<!-- 
-
-  <script>
-  function toggleProject(element) {
-    element.classList.toggle('open');
-  }
-
-  function extractHours(text) {
-    const match = text.match(/(\d+)\s*heures?/i);
-    return match ? parseInt(match[1], 10) : 0;
-  }
-
-  function calculateTotals() {
-    const projects = document.querySelectorAll('.project');
-    let total = 0, valid = 0;
-
-    projects.forEach(project => {
-      const ps = project.querySelectorAll('p');
-      ps.forEach(p => {
-        if (p.textContent.includes('Durée :')) {
-          total += extractHours(p.textContent);
-        }
-        if (p.textContent.includes('Durée validée :')) {
-          valid += extractHours(p.textContent);
-        }
-      });
-    });
-
-    document.getElementById('total-hours').textContent = total;
-    document.getElementById('valid-hours').textContent = valid;
-  }
-
-  window.onload = calculateTotals; -->
-</script>
 
 </body>
 </html>
